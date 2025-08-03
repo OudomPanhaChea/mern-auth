@@ -1,6 +1,7 @@
 # MERN auth project
 
 ## Run Server
+```bash
 cd server
 npm install
 npm run dev

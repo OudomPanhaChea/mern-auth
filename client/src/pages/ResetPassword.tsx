@@ -1,8 +1,7 @@
-import React from "react";
 import { CiLock, CiMail } from "react-icons/ci";
 import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import useAppContext from "../context/useAppContext";
 import axios from "axios";
@@ -18,7 +17,7 @@ const ResetPassword = () => {
   const [isEmailSent, setIsEmailSent] = useState<boolean>(false);
   const [otp, setOtp] = useState<string>('');
   const [isOtpSubmited, setIsOtpSubmited] = useState<boolean>(false);
-  const inputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   const handleInput = (e: React.FormEvent<HTMLInputElement>, index: number) => {
     const input = e.currentTarget;

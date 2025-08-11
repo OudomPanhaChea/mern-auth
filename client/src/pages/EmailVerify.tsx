@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { assets } from '../assets/assets'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
@@ -9,7 +9,7 @@ const EmailVerify = () => {
   axios.defaults.withCredentials = true;
   const {backendUrl, isLoggedin, userData, getUserData} = useAppContext();
   const navigate = useNavigate();
-  const inputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   const handleInput = (e: React.FormEvent<HTMLInputElement>, index: number) => {
     const input = e.currentTarget;

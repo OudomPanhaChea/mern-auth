@@ -10,7 +10,7 @@ import userRouter from "./routes/userRoute.js";
 const app = express();
 connectDB();
 
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['http://localhost:5173', 'https://mern-auth-two-omega.vercel.app'];
 
 app.use(express.json());
 app.use(cookieParser());
